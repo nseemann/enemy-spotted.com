@@ -6,9 +6,20 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="CSGO de_dust2 Callouts">
 	<meta name="keywords" content="CSGO, Counter-Strike, Counter, Strike, Global Offensive, Valve, FPS, First Person Shooter, Callouts, Maps">
-	<meta name="author" content="Nicholas 'HoboNinja' Seemann, Alex 'Snackm1x' Childer">
+	<meta name="author" content="Nicholas 'HoboNinja' Seemann, Alex 'Snackm1x' Childer, Derek 'Penguin' Johnson">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/main.css">
+	
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="./js/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="./js/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="./css/jquery.fancybox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="./js/jquery.fancybox.pack.js"></script>
+
     
   </head>
 
@@ -804,23 +815,858 @@
 		</div>
 	</div>
 
-	<!--Switch to a light box later-->
+	<!--Switch to a light box later.. because loading every single image on page load is bad mkay-->
+	<!--Also do this shit programatically with PHP or something ya fuck... doing it by hand takes way too long-->
+	
+	<div id="aplat" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>A Plat</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_aplat1.png">
+					<img src="./img/screens/de_dust2_aplat1.png" alt="A Plat 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_aplat2.png">
+					<img src="./img/screens/de_dust2_aplat2.png" alt="A Plat 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="backb" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Back Site (B)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_backb1.png">
+					<img src="./img/screens/de_dust2_backb1.png" alt="Back Site 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_backb2.png">
+					<img src="./img/screens/de_dust2_backb2.png" alt="Back Site 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="backplat" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Back Plat (B)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_backplat1.png">
+					<img src="./img/screens/de_dust2_backplat1.png" alt="Back Plat 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_backplat2.png">
+					<img src="./img/screens/de_dust2_backplat2.png" alt="Back Plat 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="barrels" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Barrels</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_barrels1.png">
+					<img src="./img/screens/de_dust2_barrels1.png" alt="Barrels 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_barrels2.png">
+					<img src="./img/screens/de_dust2_barrels2.png" alt="Barrels 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="bboxes" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>B Boxes</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_bboxes1.png">
+					<img src="./img/screens/de_dust2_bboxes1.png" alt="B Boxes 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_bboxes2.png">
+					<img src="./img/screens/de_dust2_bboxes2.png" alt="B Boxes 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="bdoors" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>B Doors</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_bdoors1.png">
+					<img src="./img/screens/de_dust2_bdoors1.png" alt="B Doors 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_bdoors2.png">
+					<img src="./img/screens/de_dust2_bdoors2.png" alt="B Doors 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="blue" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Blue / Dumpster</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_blue1.png">
+					<img src="./img/screens/de_dust2_blue1.png" alt="Blue 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_blue2.png">
+					<img src="./img/screens/de_dust2_blue2.png" alt="Blue 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="boost" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Boost (A)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_boost1.png">
+					<img src="./img/screens/de_dust2_boost1.png" alt="Boost 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_boost2.png">
+					<img src="./img/screens/de_dust2_boost2.png" alt="Boost 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="bplat" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>B Plat</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_bplat1.png">
+					<img src="./img/screens/de_dust2_bplat1.png" alt="B Plat 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_bplat2.png">
+					<img src="./img/screens/de_dust2_bplat2.png" alt="B Plat 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="cara" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Car (A)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_cara1.png">
+					<img src="./img/screens/de_dust2_cara1.png" alt="Car A 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_cara2.png">
+					<img src="./img/screens/de_dust2_cara2.png" alt="Car A 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="carb" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Car (B)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_carb1.png">
+					<img src="./img/screens/de_dust2_carb1.png" alt="Car B 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_carb2.png">
+					<img src="./img/screens/de_dust2_carb2.png" alt="Car B 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="cat" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Cat</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_cat1.png">
+					<img src="./img/screens/de_dust2_cat1.png" alt="Cat 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_cat2.png">
+					<img src="./img/screens/de_dust2_cat2.png" alt="Cat 2">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="catboost" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Cat Boost</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_catboost1.png">
+					<img src="./img/screens/de_dust2_catboost1.png" alt="Cat Boost 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_catboost2.png">
+					<img src="./img/screens/de_dust2_catboost2.png" alt="Cat Boost 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="catwalk" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Catwalk</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_catwalk1.png">
+					<img src="./img/screens/de_dust2_catwalk1.png" alt="Catwalk 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_catwalk2.png">
+					<img src="./img/screens/de_dust2_catwalk2.png" alt="Catwalk 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="closet" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Closet (B)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_closet1.png">
+					<img src="./img/screens/de_dust2_closet1.png" alt="Closet 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_closet2.png">
+					<img src="./img/screens/de_dust2_closet2.png" alt="Closet 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="cross" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Cross</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_cross1.png">
+					<img src="./img/screens/de_dust2_cross1.png" alt="Cross 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_cross2.png">
+					<img src="./img/screens/de_dust2_cross2.png" alt="Cross 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="ctramp" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>CT Ramp</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_ctramp1.png">
+					<img src="./img/screens/de_dust2_ctramp1.png" alt="CT Ramp 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_ctramp2.png">
+					<img src="./img/screens/de_dust2_ctramp2.png" alt="CT Ramp 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="ctspawn" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>CT Spawn</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_ctspawn1.png">
+					<img src="./img/screens/de_dust2_ctspawn1.png" alt="CT Spawn 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_ctspawn2.png">
+					<img src="./img/screens/de_dust2_ctspawn2.png" alt="CT Spawn 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="defaulta" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Default (A)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_defaulta1.png">
+					<img src="./img/screens/de_dust2_defaulta1.png" alt="Default A 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_defaulta2.png">
+					<img src="./img/screens/de_dust2_defaulta2.png" alt="Default A 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="defaultb" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Default (B)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_defaultb1.png">
+					<img src="./img/screens/de_dust2_defaultb1.png" alt="Default B 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_defaultb2.png">
+					<img src="./img/screens/de_dust2_defaultb2.png" alt="Default B 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="dog" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Dog</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_dog1.png">
+					<img src="./img/screens/de_dust2_dog1.png" alt="Dog 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_dog2.png">
+					<img src="./img/screens/de_dust2_dog2.png" alt="Dog 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="doublestack" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Double Stack</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_doublestack1.png">
+					<img src="./img/screens/de_dust2_doublestack1.png" alt="Double Stack 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_doublestack2.png">
+					<img src="./img/screens/de_dust2_doublestack2.png" alt="Double Stack 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="elevator" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Elevator</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_elevator1.png">
+					<img src="./img/screens/de_dust2_elevator1.png" alt="Elevator 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_elevator2.png">
+					<img src="./img/screens/de_dust2_elevator2.png" alt="Elevator 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="fence" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Fence</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_fence1.png">
+					<img src="./img/screens/de_dust2_fence1.png" alt="Fence 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_fence2.png">
+					<img src="./img/screens/de_dust2_fence2.png" alt="Fence 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="goose" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Goose</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_goose1.png">
+					<img src="./img/screens/de_dust2_goose1.png" alt="Goose 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_goose2.png">
+					<img src="./img/screens/de_dust2_goose2.png" alt="Goose 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="greenbox" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Green Box / Mid Closet</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_greenbox1.png">
+					<img src="./img/screens/de_dust2_greenbox1.png" alt="Green Box 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_greenbox2.png">
+					<img src="./img/screens/de_dust2_greenbox2.png" alt="Green Box 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="longa" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Long A</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_longa1.png">
+					<img src="./img/screens/de_dust2_longa1.png" alt="Long A 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_longa2.png">
+					<img src="./img/screens/de_dust2_longa2.png" alt="Long A 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="longdoors" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Long Doors</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_longdoors1.png">
+					<img src="./img/screens/de_dust2_longdoors1.png" alt="Long Doors 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_greenbox2.png">
+					<img src="./img/screens/de_dust2_greenbox2.png" alt="Long Doors 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="lowerb" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Lower B (Tunnels/Tuns)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_lowerb1.png">
+					<img src="./img/screens/de_dust2_lowerb1.png" alt="Lower B 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_lowerb2.png">
+					<img src="./img/screens/de_dust2_lowerb2.png" alt="Lower B 2">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="mid" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Mid</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_mid1.png">
+					<img src="./img/screens/de_dust2_mid1.png" alt="Mid 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_mid2.png">
+					<img src="./img/screens/de_dust2_mid2.png" alt="Mid 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="middoors" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Mid Doors</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_middoors1.png">
+					<img src="./img/screens/de_dust2_middoors1.png" alt="Mid Doors 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_middoors2.png">
+					<img src="./img/screens/de_dust2_middoors2.png" alt="Mid Doors 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="ninja" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Ninja</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_ninja1.png">
+					<img src="./img/screens/de_dust2_ninja1.png" alt="Ninja 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_ninja2.png">
+					<img src="./img/screens/de_dust2_ninja2.png" alt="Ninja 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="outsidelong" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Outside Long</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_outsidelong1.png">
+					<img src="./img/screens/de_dust2_outsidelong1.png" alt="Outside Long 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_outsidelong2.png">
+					<img src="./img/screens/de_dust2_outsidelong2.png" alt="Outside Long 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="outsidetuns" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Outside Tunnels</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_outsidetuns1.png">
+					<img src="./img/screens/de_dust2_outsidetuns1.png" alt="Outside Tunnels 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_outsidetuns2.png">
+					<img src="./img/screens/de_dust2_outsidetuns2.png" alt="Outside Tunnels 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="palm" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Palm</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_palm1.png">
+					<img src="./img/screens/de_dust2_palm1.png" alt="Palm 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_palm2.png">
+					<img src="./img/screens/de_dust2_palm2.png" alt="Palm 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="pit" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Pit</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_pit1.png">
+					<img src="./img/screens/de_dust2_pit1.png" alt="Pit 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_pit2.png">
+					<img src="./img/screens/de_dust2_pit2.png" alt="Pit 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="pitplat" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Pit Plat</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_pitplat1.png">
+					<img src="./img/screens/de_dust2_pitplat1.png" alt="Pit Plat 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_pitplat2.png">
+					<img src="./img/screens/de_dust2_pitplat2.png" alt="Pit Plat 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="pitside" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Side of Pit</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_pitside1.png">
+					<img src="./img/screens/de_dust2_pitside1.png" alt="Side of Pit 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_pitside2.png">
+					<img src="./img/screens/de_dust2_pitside2.png" alt="Side of Pit 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="pizza" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Pizza</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_pizza1.png">
+					<img src="./img/screens/de_dust2_pizza1.png" alt="Pizza 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_pizza2.png">
+					<img src="./img/screens/de_dust2_pizza2.png" alt="Pizza 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="quadboxes" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Quad Boxes</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_quadboxes1.png">
+					<img src="./img/screens/de_dust2_quadboxes1.png" alt="Quad Boxes 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_quadboxes2.png">
+					<img src="./img/screens/de_dust2_quadboxes2.png" alt="Quad Boxes 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="safea" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Safe (A)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_safea1.png">
+					<img src="./img/screens/de_dust2_safea1.png" alt="Safe A 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_safea2.png">
+					<img src="./img/screens/de_dust2_safea2.png" alt="Safe A 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="safeb" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Safe (B)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_safeb1.png">
+					<img src="./img/screens/de_dust2_safeb1.png" alt="Safe B 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_safeb2.png">
+					<img src="./img/screens/de_dust2_safeb2.png" alt="Safe B 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="shorta" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Short A</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_shorta1.png">
+					<img src="./img/screens/de_dust2_shorta1.png" alt="Short A 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_shorta2.png">
+					<img src="./img/screens/de_dust2_shorta2.png" alt="Short A 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="stairs" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Stairs</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_stairs1.png">
+					<img src="./img/screens/de_dust2_stairs1.png" alt="Stairs 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_stairs2.png">
+					<img src="./img/screens/de_dust2_stairs2.png" alt="Stairs 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="suicide" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Suicide</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_suicide1.png">
+					<img src="./img/screens/de_dust2_suicide1.png" alt="Suicide 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_suicide2.png">
+					<img src="./img/screens/de_dust2_suicide2.png" alt="Suicide 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="topmid" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Top Mid</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_topmid1.png">
+					<img src="./img/screens/de_dust2_topmid1.png" alt="Top Mid 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_topmid2.png">
+					<img src="./img/screens/de_dust2_topmid2.png" alt="Top Mid 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
 	<div id="tspawn" class="modalDialog">
 		<div>
 			<a href="#close" title="Close" class="close">X</a>
 			<h2>T Spawn</h2>
 			<div class="thumbnail">
 				<a href="./img/screens/de_dust2_tspawn1.png">
-					<img src="./img/screens/de_dust2_tspawn1.png" alt="T Spawn Image 1">
+					<img src="./img/screens/de_dust2_tspawn1.png" alt="T Spawn 1">
 				</a>
 			</div>
 			<div class="thumbnail">
 				<a href="./img/screens/de_dust2_tspawn2.png">
-					<img src="./img/screens/de_dust2_tspawn2.png" alt="T Spawn Image 2">
+					<img src="./img/screens/de_dust2_tspawn2.png" alt="T Spawn 2">
 				</a>
 			</div>
 		</div>
 	</div>
 	
+	<div id="upperb" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Upper B (Tunnels/Tuns)</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_upperb1.png">
+					<img src="./img/screens/de_dust2_upperb1.png" alt="Upper B 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_upperb2.png">
+					<img src="./img/screens/de_dust2_upperb2.png" alt="Upper B 2">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="window" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Window</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_window1.png">
+					<img src="./img/screens/de_dust2_window1.png" alt="Window 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_window2.png">
+					<img src="./img/screens/de_dust2_window2.png" alt="Window 2">
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="xbox" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Xbox</h2>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_xbox1.png">
+					<img src="./img/screens/de_dust2_xbox1.png" alt="Xbox 1">
+				</a>
+			</div>
+			<div class="thumbnail">
+				<a href="./img/screens/de_dust2_xbox2.png">
+					<img src="./img/screens/de_dust2_xbox2.png" alt="Xbox 2">
+				</a>
+			</div>
+		</div>
+	</div>
+
   </body>
 </html>
